@@ -125,3 +125,18 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+.page-head {
+  background-color: #e0e7ff;
+  padding: 44px 0;
+}
+
+.page-head h1 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+  color: #1e1b4b;
+}
+
+.footer-link {
+  color: #93c5fd;
+  text-decoration: none;
+}
