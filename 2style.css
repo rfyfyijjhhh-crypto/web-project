@@ -12,7 +12,8 @@ body {
 }
 
 .container {
-  width: 1040px;
+  width: 100%;
+  max-width: 1040px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -139,4 +140,44 @@ body {
 .footer-link {
   color: #93c5fd;
   text-decoration: none;
+}
+
+@media (max-width: 900px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero h1 {
+    font-size: 1.85rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 0 14px;
+  }
+
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 40px 0;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
 }
