@@ -1,0 +1,9 @@
+# Жүйелік және уақытша файлдар
+.DS_Store
+Thumbs.db
+*.log
+
+# Редакторлардың жеке баптаулары
+.vscode/*
+!.vscode/extensions.json
+.idea/
