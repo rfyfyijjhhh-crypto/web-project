@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WebCraft Club — Клуб веб-разработки</title>
+  <title>О клубе — WebCraft Club</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -11,82 +11,68 @@
     <div class="container header-inner">
       <a class="logo" href="index.html">WebCraft Club</a>
       <nav class="nav" aria-label="Основная навигация">
-        <a class="nav-link active" href="index.html">Главная</a>
-        <a class="nav-link" href="about.html">О клубе</a>
-        <a class="nav-link" href="#directions">Направления</a>
-        <a class="nav-link" href="#schedule">Расписание</a>
+        <a class="nav-link" href="index.html">Главная</a>
+        <a class="nav-link active" href="about.html">О клубе</a>
+        <a class="nav-link" href="index.html#directions">Направления</a>
+        <a class="nav-link" href="index.html#schedule">Расписание</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <!-- Блок 1: Главный экран -->
     <section class="hero">
       <div class="container">
-        <h1>Создаём современные сайты с нуля</h1>
+        <h1>О клубе веб-разработки</h1>
         <p class="hero-text">
-          Учебный клуб для школьников и студентов, где мы изучаем HTML, CSS,
-          работу с Git и GitHub, а также собираем реальные учебные проекты.
+          Мы помогаем новичкам уверенно освоить базовую вёрстку, аккуратную
+          работу с Git и публикацию проектов в интернете.
         </p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="about.html">Подробнее о клубе</a>
-          <a class="btn btn-secondary" href="#schedule">Посмотреть расписание</a>
+          <a class="btn btn-primary" href="index.html">Вернуться на главную</a>
         </div>
       </div>
     </section>
 
-    <!-- Блок 2: Направления обучения -->
-    <section id="directions" class="section">
+    <!-- Тематический блок 1 -->
+    <section class="section">
       <div class="container">
-        <h2>Чему мы учимся</h2>
-        <p class="section-subtitle">
-          Постепенно переходим от базовой разметки к адаптивной вёрстке и командной работе.
-        </p>
-        <div class="cards">
-          <article class="card">
-            <h3>HTML и семантика</h3>
-            <p>
-              Строим понятную структуру страниц: заголовки, списки, навигацию,
-              формы и доступность контента.
-            </p>
-          </article>
-          <article class="card">
-            <h3>CSS и адаптивность</h3>
-            <p>
-              Настраиваем типографику, сетки Flexbox и Grid, а также медиазапросы
-              для удобного просмотра на телефонах и ПК.
-            </p>
-          </article>
-          <article class="card">
-            <h3>Git и GitHub</h3>
-            <p>
-              Ведём историю изменений через коммиты, работаем в ветках, оформляем
-              Pull Request и публикуем сайты через GitHub Pages.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Блок 3: Расписание и формат занятий -->
-    <section id="schedule" class="section section-alt">
-      <div class="container">
-        <h2>Как проходят занятия</h2>
+        <h2>Правила и формат участия</h2>
         <div class="info-grid">
           <div class="info-box">
-            <h3>Практика на каждом уроке</h3>
+            <h3>Учебный проект каждого участника</h3>
             <p>
-              20 минут теории и разбор примеров, остальное время — самостоятельная
-              вёрстка и проверка кода в браузере.
+              Каждый собирает собственный сайт, ведёт историю версий в Git
+              и публикует результат через GitHub Pages.
             </p>
           </div>
           <div class="info-box">
-            <h3>График встреч</h3>
+            <h3>Взаимопомощь и разбор ошибок</h3>
             <p>
-              Вторник и четверг с 16:00 до 17:30, аудитория 204. Перед началом
-              нужен ноутбук с установленным VS Code и Git.
+              На занятиях разбираем частые ошибки в путях к файлам, стилях
+              и работе с ветками в Pull Request.
             </p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Тематический блок 2 -->
+    <section class="section section-alt">
+      <div class="container">
+        <h2>Этапы учебного пути</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Этап 1. Разметка и стили</h3>
+            <p>Создаём структуру на HTML и оформляем блоки через CSS.</p>
+          </article>
+          <article class="card">
+            <h3>Этап 2. Git и ветки</h3>
+            <p>Делаем коммиты, создаём ветки и объединяем их через PR.</p>
+          </article>
+          <article class="card">
+            <h3>Этап 3. Публикация</h3>
+            <p>Проверяем адаптивность и выкладываем сайт на GitHub Pages.</p>
+          </article>
         </div>
       </div>
     </section>
