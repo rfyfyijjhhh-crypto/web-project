@@ -8,18 +8,24 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
   color: #1f2937;
-  background-color: #ffffff;
+  background-color: #f8fafc;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 .container {
-  max-width: 1000px;
+  width: 100%;
+  max-width: 1040px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-/* Шапка и навигация */
 .site-header {
-  background-color: #111827;
+  background-color: #0f172a;
   color: #ffffff;
   padding: 16px 0;
 }
@@ -41,91 +47,67 @@ body {
 .nav {
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .nav-link {
-  color: #d1d5db;
+  color: #e2e8f0;
   text-decoration: none;
   padding: 6px 10px;
   border-radius: 6px;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .nav-link:hover,
+.nav-link:focus-visible,
 .nav-link.active {
-  color: #ffffff;
   background-color: #2563eb;
+  color: #ffffff;
+  outline: 2px solid #93c5fd;
+  outline-offset: 2px;
 }
 
-/* Главный баннер */
 .hero {
-  background-color: #eff6ff;
+  background-color: #1e3a8a;
+  color: #ffffff;
   padding: 64px 0;
 }
 
 .hero h1 {
   font-size: 2.25rem;
+  margin-bottom: 14px;
   line-height: 1.2;
-  margin-bottom: 16px;
-  color: #111827;
 }
 
-.hero-text {
-  max-width: 650px;
-  font-size: 1.05rem;
-  color: #374151;
+.hero p {
+  max-width: 640px;
   margin-bottom: 24px;
+  color: #dbeafe;
 }
 
-.hero-actions {
-  display: flex;
-  gap: 12px;
+.page-head {
+  background-color: #e0e7ff;
+  padding: 44px 0;
 }
 
-.btn {
-  display: inline-block;
-  padding: 10px 18px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
+.page-head h1 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+  color: #1e1b4b;
 }
 
-.btn-primary {
-  background-color: #2563eb;
-  color: #ffffff;
-}
-
-.btn-primary:hover {
-  background-color: #1d4ed8;
-}
-
-.btn-secondary {
-  background-color: #ffffff;
-  color: #1f2937;
-  border: 1px solid #cbd5e1;
-}
-
-.btn-secondary:hover {
-  background-color: #f8fafc;
-}
-
-/* Секции и карточки */
 .section {
-  padding: 56px 0;
+  padding: 52px 0;
 }
 
 .section-alt {
-  background-color: #f9fafb;
+  background-color: #e2e8f0;
 }
 
 .section h2 {
-  font-size: 1.75rem;
-  margin-bottom: 10px;
-  color: #111827;
-}
-
-.section-subtitle {
-  color: #4b5563;
-  margin-bottom: 28px;
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  color: #0f172a;
 }
 
 .cards {
@@ -136,62 +118,103 @@ body {
 
 .card {
   background-color: #ffffff;
-  border: 1px solid #e5e7eb;
-  border-radius: 8px;
-  padding: 20px;
+  padding: 22px;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
 }
 
 .card h3 {
   margin-bottom: 10px;
-  color: #111827;
+  color: #1e3a8a;
 }
 
-.card p {
-  color: #4b5563;
-}
-
-.info-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
-
-.info-box {
-  background-color: #ffffff;
-  border: 1px solid #e5e7eb;
+.btn {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 10px 18px;
+  background-color: #2563eb;
+  color: #ffffff;
+  text-decoration: none;
   border-radius: 8px;
-  padding: 20px;
+  font-weight: bold;
 }
 
-.info-box h3 {
-  margin-bottom: 8px;
+.btn:hover,
+.btn:focus-visible {
+  background-color: #1d4ed8;
+  outline: 2px solid #0f172a;
+  outline-offset: 2px;
 }
 
-/* Подвал */
 .site-footer {
-  background-color: #111827;
-  color: #d1d5db;
+  background-color: #0f172a;
+  color: #cbd5e1;
   padding: 24px 0;
-  margin-top: 40px;
+  margin-top: 24px;
 }
 
 .footer-inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
-.footer-links {
-  display: flex;
-  gap: 16px;
-}
-
-.footer-links a {
+.footer-link {
   color: #93c5fd;
   text-decoration: none;
 }
 
-.footer-links a:hover {
+.footer-link:hover,
+.footer-link:focus-visible {
   text-decoration: underline;
+}
+
+/* Планшеты и узкие экраны (до 900px) */
+@media (max-width: 900px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero h1 {
+    font-size: 1.85rem;
+  }
+}
+
+/* Мобильные экраны (до 600px) */
+@media (max-width: 600px) {
+  .container {
+    padding: 0 14px;
+  }
+
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav {
+    width: 100%;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .nav-link {
+    display: block;
+    width: 100%;
+    padding: 10px 12px;
+    background-color: #1e293b;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 40px 0;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+  }
 }
